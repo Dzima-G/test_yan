@@ -65,8 +65,10 @@
 
 **Добавление новых мест с помощью GeoJSON:**
 - требуется файл формата json (GeoJSON) см. https://ru.wikipedia.org/wiki/GeoJSON (образец [sample place.json](https://github.com/Dzima-G/yandex_afisha/blob/main/sample%20place.json))
-- для запуска добавления места: 
-`python manage.py load_place URL` (URL - ссылка на файл GeoJSON)  
+- для запуска добавления места (URL - ссылка на файл GeoJSON): 
+  ```python
+  python manage.py load_place URL
+  ```   
 
 Пример запуска:
   ```python
