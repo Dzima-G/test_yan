@@ -11,12 +11,6 @@
   - Создайте виртуальное окружение, заменить путь на фактический к проекту (см. документацию https://docs.python.org/3/library/venv.html):
   ```python
   python -m venv C:\path\MyProject\venv
-      def add_arguments(self, parser):
-        parser.add_argument(
-            'url',
-            type=str,
-            help=u'Link to json file with data for adding location'
-        )
   ```   
   - Активируйте виртуально окружение из папки вашего проекта, Пример: `PS C:\path\MyProject> venv\Scripts\activate`:
   ```python
@@ -43,8 +37,14 @@
 
 Для входа в панель администратора:
 
-- Создание суперпользователя `python manage.py createsuperuser`
-- Запустите сервер командой `python manage.py runserver`
+- Создание суперпользователя:
+  ```python
+  python manage.py createsuperuser
+  ```
+- Запустите сервер командой 
+  ```python
+  python manage.py runserver
+  ```
 Переходите по ссылке [127.0.0.1:8000/admin/](http://127.0.0.1:8000/admin/), вы увидите вход в панель администратора.
 
 ## Переменные окружения
@@ -65,10 +65,13 @@
 
 **Добавление новых мест с помощью GeoJSON:**
 - требуется файл формата json (GeoJSON) см. https://ru.wikipedia.org/wiki/GeoJSON (образец [sample place.json](https://github.com/Dzima-G/yandex_afisha/blob/main/sample%20place.json))
-- для запуска добавления места: `python manage.py load_place URL` (URL - ссылка на файл GeoJSON)  
+- для запуска добавления места: 
+`python manage.py load_place URL` (URL - ссылка на файл GeoJSON)  
 
 Пример запуска:
-`python manage.py load_place https://raw.githubusercontent.com/Dzima-G/yandex_afisha/refs/heads/main/static/places/moscow_legends.json`
+  ```python
+  python manage.py load_place https://raw.githubusercontent.com/Dzima-G/yandex_afisha/refs/heads/main/static/places/moscow_legends.json
+  ```
 ## Цели проекта
 
 Код написан в учебных целях — это урок в курсе по Python и веб-разработке на сайте [Devman](https://dvmn.org).
