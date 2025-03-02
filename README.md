@@ -11,6 +11,12 @@
   - Создайте виртуальное окружение, заменить путь на фактический к проекту (см. документацию https://docs.python.org/3/library/venv.html):
   ```python
   python -m venv C:\path\MyProject\venv
+      def add_arguments(self, parser):
+        parser.add_argument(
+            'url',
+            type=str,
+            help=u'Link to json file with data for adding location'
+        )
   ```   
   - Активируйте виртуально окружение из папки вашего проекта, Пример: `PS C:\path\MyProject> venv\Scripts\activate`:
   ```python
